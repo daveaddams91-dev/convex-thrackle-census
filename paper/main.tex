@@ -10,12 +10,13 @@
 \usepackage{enumitem}
 \usepackage{microtype}
 
-\hypersetup{colorlinks=true,linkcolor=[rgb]{0.1,0.3,0.6},citecolor=[rgb]{0.1,0.3,0.6},urlcolor=[rgb]{0.1,0.3,0.6},pdftitle={Convex Thrackles: a residue bound and the census $2^{n-1}-n$},pdfauthor={thrackle-census contributors}}
+\hypersetup{colorlinks=true,linkcolor=[rgb]{0.1,0.3,0.6},citecolor=[rgb]{0.1,0.3,0.6},urlcolor=[rgb]{0.1,0.3,0.6},pdftitle={Convex Thrackles: a residue bound and the census $2^{n-1}-n$},pdfauthor={Rajveersinh Pardeshi}}
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{remark}[theorem]{Remark}
@@ -29,7 +30,7 @@
 
 \title{\bfseries Convex Thrackles: a residue bound, a wedge lemma,\\
 and the census \texorpdfstring{$2^{n-1}-n$}{2\^{}(n-1) - n}}
-\author{}
+\author{Rajveersinh Pardeshi}
 \date{}
 
 \begin{document}
@@ -303,7 +304,7 @@ S(i,t):=\{v_iv_{i+1}\}\cup\{v_iw_t,\ v_{i+1}w_t\}
 \]
 Then $S(i,t)$ is a convex thrackle with exactly $n$ edges whose only polygon
 edge is $\{v_iv_{i+1}\}$.  Conversely, every convex thrackle containing exactly
-one polygon edge $\{$v_iv_{i+1}\}$ is contained in a unique $S(i,t)$ and has at
+one polygon edge $\{v_iv_{i+1}\}$ is contained in a unique $S(i,t)$ and has at
 most $n$ edges, with equality only if it equals some $S(i,t)$.
 \end{theorem}
 
@@ -438,7 +439,7 @@ endpoint in $B$, while the only cycle edges touching $u$ or $w$ besides
 $\{a_i,u\},\{a_i,w\}$ would have to be $\{u,z\}$, $z\in B$, or $\{w,z\}$, $z\in
 B$, and those are excluded by the preceding conditions (for $\{u,z\}$: it must
 cross $\{a_i,w\}$, but neither $u$ nor $z$ lies in $C$).  Every vertex of $B$
-must lie on a cycle edge, so $B=\varnothing$. \hfill$\(\square\)
+must lie on a cycle edge, so $B=\varnothing$. \hfill\(\square\)
 
 By the claim we may write $N_\mc(a_i)=\{a_j,a_{j+1}\}$ for some $j$.  Consider
 $a_0$, say $N_\mc(a_0)=\{a_p,a_{p+1}\}$ with $2\le p\le m-2$ (the claim's
@@ -501,7 +502,7 @@ m-1$.  Reading the four points off the circle in the order
 $a_{j-s},\,u,\,a_{j'-s},\,u'$ (valid because $u$ lies in the gap
 $(a_j,a_{j+1})$ and $u'$ in the gap $(a_{j'},a_{j'+1})$ with $j'\ne j$) and
 applying Lemma~\ref{lem:cross}, the two chords cross.  If $j'=j$ the two
-pendants share the apex. \hfill$\square\)
+pendants share the apex. \hfill\(\square\)
 \end{proof}
 
 \begin{theorem}[the census]\label{thm:census}
@@ -601,7 +602,8 @@ rebuilt every maximal thrackle from the odd subsets via
 Theorem~\ref{thm:census}.  The two routes produce identical sets, and both agree
 with $2^{n-1}-n$ and with the refined profile $\binom nm$.
 
-\begin{center}
+\begin{table}[htbp]
+\centering
 \begin{tabular}{rrrrrrrrr}
 \toprule
 $n$ & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11\\
@@ -622,7 +624,7 @@ from brute-force enumeration of \emph{all} thrackles; rows $2^{n-1}-n$ and
 $\binom nm$ are the closed forms of Theorem~\ref{thm:census}.  Full profiles for
 all edge counts are in \texttt{results/census.json}.}
 \label{tab:census}
-\end{center}
+\end{table}
 
 \begin{figure}[htbp]
 \centering
