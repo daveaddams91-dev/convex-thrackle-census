@@ -1,0 +1,259 @@
+{
+ "3": {
+  "total_thrackles": 8,
+  "census_by_size": {
+   "0": 1,
+   "1": 3,
+   "2": 3,
+   "3": 1
+  },
+  "maximal": 1,
+  "by_cycle_length": {
+   "3": 1
+  },
+  "predicted_maximal": 4,
+  "predicted_by_cycle_length": {
+   "3": 1
+  },
+  "all_thrackles_valid": true,
+  "routes_agree": true,
+  "seconds": 0.0,
+  "verified": true
+ },
+ "4": {
+  "total_thrackles": 36,
+  "census_by_size": {
+   "0": 1,
+   "1": 6,
+   "2": 13,
+   "3": 12,
+   "4": 4
+  },
+  "maximal": 4,
+  "by_cycle_length": {
+   "3": 4
+  },
+  "predicted_maximal": 4,
+  "predicted_by_cycle_length": {
+   "3": 4
+  },
+  "all_thrackles_valid": true,
+  "routes_agree": true,
+  "seconds": 0.0,
+  "verified": true
+ },
+ "5": {
+  "total_thrackles": 152,
+  "census_by_size": {
+   "0": 1,
+   "1": 10,
+   "2": 35,
+   "3": 55,
+   "4": 40,
+   "5": 11
+  },
+  "maximal": 11,
+  "by_cycle_length": {
+   "3": 10,
+   "5": 1
+  },
+  "predicted_maximal": 11,
+  "predicted_by_cycle_length": {
+   "3": 10,
+   "5": 1
+  },
+  "all_thrackles_valid": true,
+  "routes_agree": true,
+  "seconds": 0.001,
+  "verified": true
+ },
+ "6": {
+  "total_thrackles": 600,
+  "census_by_size": {
+   "0": 1,
+   "1": 15,
+   "2": 75,
+   "3": 171,
+   "4": 198,
+   "5": 114,
+   "6": 26
+  },
+  "maximal": 26,
+  "by_cycle_length": {
+   "3": 20,
+   "5": 6
+  },
+  "predicted_maximal": 26,
+  "predicted_by_cycle_length": {
+   "3": 20,
+   "5": 6
+  },
+  "all_thrackles_valid": true,
+  "routes_agree": true,
+  "seconds": 0.005,
+  "verified": true
+ },
+ "7": {
+  "total_thrackles": 2256,
+  "census_by_size": {
+   "0": 1,
+   "1": 21,
+   "2": 140,
+   "3": 427,
+   "4": 693,
+   "5": 623,
+   "6": 294,
+   "7": 57
+  },
+  "maximal": 57,
+  "by_cycle_length": {
+   "3": 35,
+   "5": 21,
+   "7": 1
+  },
+  "predicted_maximal": 57,
+  "predicted_by_cycle_length": {
+   "3": 35,
+   "5": 21,
+   "7": 1
+  },
+  "all_thrackles_valid": true,
+  "routes_agree": true,
+  "seconds": 0.026,
+  "verified": true
+ },
+ "8": {
+  "total_thrackles": 8208,
+  "census_by_size": {
+   "0": 1,
+   "1": 28,
+   "2": 238,
+   "3": 924,
+   "4": 1961,
+   "5": 2440,
+   "6": 1784,
+   "7": 712,
+   "8": 120
+  },
+  "maximal": 120,
+  "by_cycle_length": {
+   "3": 56,
+   "5": 56,
+   "7": 8
+  },
+  "predicted_maximal": 120,
+  "predicted_by_cycle_length": {
+   "3": 56,
+   "5": 56,
+   "7": 8
+  },
+  "all_thrackles_valid": true,
+  "routes_agree": true,
+  "seconds": 0.107,
+  "verified": true
+ },
+ "9": {
+  "total_thrackles": 29216,
+  "census_by_size": {
+   "0": 1,
+   "1": 36,
+   "2": 378,
+   "3": 1806,
+   "4": 4797,
+   "5": 7731,
+   "6": 7776,
+   "7": 4788,
+   "8": 1656,
+   "9": 247
+  },
+  "maximal": 247,
+  "by_cycle_length": {
+   "3": 84,
+   "5": 126,
+   "7": 36,
+   "9": 1
+  },
+  "predicted_maximal": 247,
+  "predicted_by_cycle_length": {
+   "3": 84,
+   "5": 126,
+   "7": 36,
+   "9": 1
+  },
+  "all_thrackles_valid": true,
+  "routes_agree": true,
+  "seconds": 0.526,
+  "verified": true
+ },
+ "10": {
+  "total_thrackles": 102496,
+  "census_by_size": {
+   "0": 1,
+   "1": 45,
+   "2": 570,
+   "3": 3270,
+   "4": 10545,
+   "5": 21103,
+   "6": 27350,
+   "7": 23080,
+   "8": 12280,
+   "9": 3750,
+   "10": 502
+  },
+  "maximal": 502,
+  "by_cycle_length": {
+   "3": 120,
+   "5": 252,
+   "7": 120,
+   "9": 10
+  },
+  "predicted_maximal": 502,
+  "predicted_by_cycle_length": {
+   "3": 120,
+   "5": 252,
+   "7": 120,
+   "9": 10
+  },
+  "all_thrackles_valid": true,
+  "routes_agree": true,
+  "seconds": 1.893,
+  "verified": true
+ },
+ "11": {
+  "total_thrackles": 356160,
+  "census_by_size": {
+   "0": 1,
+   "1": 55,
+   "2": 825,
+   "3": 5577,
+   "4": 21351,
+   "5": 51524,
+   "6": 82533,
+   "7": 89430,
+   "8": 65032,
+   "9": 30481,
+   "10": 8338,
+   "11": 1013
+  },
+  "maximal": 1013,
+  "by_cycle_length": {
+   "3": 165,
+   "5": 462,
+   "7": 330,
+   "9": 55,
+   "11": 1
+  },
+  "predicted_maximal": 1013,
+  "predicted_by_cycle_length": {
+   "3": 165,
+   "5": 462,
+   "7": 330,
+   "9": 55,
+   "11": 1
+  },
+  "all_thrackles_valid": true,
+  "routes_agree": true,
+  "seconds": 8.079,
+  "verified": true
+ }
+}

@@ -1,0 +1,76 @@
+{
+ "rows": [
+  {
+   "n": 4,
+   "n_thrackles": 36,
+   "n_maximal": 4,
+   "enum_seconds": 0.0001,
+   "construct_seconds": 0.0,
+   "ratio_thrackles_over_maximal": 9.0,
+   "log2_thrackles": 6
+  },
+  {
+   "n": 5,
+   "n_thrackles": 152,
+   "n_maximal": 11,
+   "enum_seconds": 0.0002,
+   "construct_seconds": 0.0001,
+   "ratio_thrackles_over_maximal": 13.818,
+   "log2_thrackles": 8
+  },
+  {
+   "n": 6,
+   "n_thrackles": 600,
+   "n_maximal": 26,
+   "enum_seconds": 0.0007,
+   "construct_seconds": 0.0003,
+   "ratio_thrackles_over_maximal": 23.077,
+   "log2_thrackles": 10
+  },
+  {
+   "n": 7,
+   "n_thrackles": 2256,
+   "n_maximal": 57,
+   "enum_seconds": 0.0032,
+   "construct_seconds": 0.0011,
+   "ratio_thrackles_over_maximal": 39.579,
+   "log2_thrackles": 12
+  },
+  {
+   "n": 8,
+   "n_thrackles": 8208,
+   "n_maximal": 120,
+   "enum_seconds": 0.0172,
+   "construct_seconds": 0.0036,
+   "ratio_thrackles_over_maximal": 68.4,
+   "log2_thrackles": 14
+  },
+  {
+   "n": 9,
+   "n_thrackles": 29216,
+   "n_maximal": 247,
+   "enum_seconds": 0.0713,
+   "construct_seconds": 0.0128,
+   "ratio_thrackles_over_maximal": 118.283,
+   "log2_thrackles": 15
+  },
+  {
+   "n": 10,
+   "n_thrackles": 102496,
+   "n_maximal": 502,
+   "enum_seconds": 0.2427,
+   "construct_seconds": 0.0344,
+   "ratio_thrackles_over_maximal": 204.175,
+   "log2_thrackles": 17
+  },
+  {
+   "n": 11,
+   "n_thrackles": 356160,
+   "n_maximal": 1013,
+   "enum_seconds": 1.0068,
+   "construct_seconds": 0.1893,
+   "ratio_thrackles_over_maximal": 351.589,
+   "log2_thrackles": 19
+  }
+ ]
+}

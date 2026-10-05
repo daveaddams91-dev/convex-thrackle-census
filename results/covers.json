@@ -1,0 +1,390 @@
+{
+ "4": {
+  "chi": 2,
+  "chi_closed_form": 2,
+  "matches_literature": true,
+  "cover_sizes": [
+   4,
+   4
+  ],
+  "enumeration_seconds": 0.0,
+  "solve_seconds": 0.92,
+  "chi_s": {
+   "1": 6,
+   "2": 3,
+   "3": 2,
+   "4": 2
+  },
+  "bounds": {
+   "1": [
+    6,
+    8
+   ],
+   "2": [
+    3,
+    4
+   ],
+   "3": [
+    2,
+    4
+   ],
+   "4": [
+    2,
+    2
+   ]
+  },
+  "bounds_respected": true
+ },
+ "5": {
+  "chi": 3,
+  "chi_closed_form": 3,
+  "matches_literature": true,
+  "cover_sizes": [
+   5,
+   5,
+   5
+  ],
+  "enumeration_seconds": 0.0,
+  "solve_seconds": 0.01,
+  "chi_s": {
+   "1": 10,
+   "2": 5,
+   "3": 4,
+   "4": 3,
+   "5": 3
+  },
+  "bounds": {
+   "1": [
+    10,
+    15
+   ],
+   "2": [
+    5,
+    9
+   ],
+   "3": [
+    4,
+    6
+   ],
+   "4": [
+    3,
+    6
+   ],
+   "5": [
+    3,
+    3
+   ]
+  },
+  "bounds_respected": true
+ },
+ "6": {
+  "chi": 3,
+  "chi_closed_form": 3,
+  "matches_literature": true,
+  "cover_sizes": [
+   6,
+   6,
+   6
+  ],
+  "enumeration_seconds": 0.0,
+  "solve_seconds": 0.02,
+  "chi_s": {
+   "1": 15,
+   "2": 8,
+   "3": 5,
+   "4": 4,
+   "5": 3,
+   "6": 3
+  },
+  "bounds": {
+   "1": [
+    15,
+    18
+   ],
+   "2": [
+    8,
+    9
+   ],
+   "3": [
+    5,
+    6
+   ],
+   "4": [
+    4,
+    6
+   ],
+   "5": [
+    3,
+    6
+   ],
+   "6": [
+    3,
+    3
+   ]
+  },
+  "bounds_respected": true
+ },
+ "7": {
+  "chi": 4,
+  "chi_closed_form": 4,
+  "matches_literature": true,
+  "cover_sizes": [
+   7,
+   7,
+   7,
+   7
+  ],
+  "enumeration_seconds": 0.01,
+  "solve_seconds": 0.06,
+  "chi_s": {
+   "1": 21,
+   "2": 11,
+   "3": 7,
+   "4": 6,
+   "5": 5,
+   "6": 4,
+   "7": 4
+  },
+  "bounds": {
+   "1": [
+    21,
+    28
+   ],
+   "2": [
+    11,
+    16
+   ],
+   "3": [
+    7,
+    12
+   ],
+   "4": [
+    6,
+    8
+   ],
+   "5": [
+    5,
+    8
+   ],
+   "6": [
+    4,
+    8
+   ],
+   "7": [
+    4,
+    4
+   ]
+  },
+  "bounds_respected": true
+ },
+ "8": {
+  "chi": 5,
+  "chi_closed_form": 5,
+  "matches_literature": true,
+  "cover_sizes": [
+   8,
+   8,
+   8,
+   8,
+   8
+  ],
+  "enumeration_seconds": 0.01,
+  "solve_seconds": 0.23,
+  "chi_s": {
+   "1": 28,
+   "2": 14,
+   "3": 10,
+   "4": 7,
+   "5": 6,
+   "6": 5,
+   "7": 5,
+   "8": 5
+  },
+  "bounds": {
+   "1": [
+    28,
+    40
+   ],
+   "2": [
+    14,
+    20
+   ],
+   "3": [
+    10,
+    15
+   ],
+   "4": [
+    7,
+    10
+   ],
+   "5": [
+    6,
+    10
+   ],
+   "6": [
+    5,
+    10
+   ],
+   "7": [
+    4,
+    10
+   ],
+   "8": [
+    4,
+    5
+   ]
+  },
+  "bounds_respected": true
+ },
+ "9": {
+  "chi": 6,
+  "chi_closed_form": 6,
+  "matches_literature": true,
+  "cover_sizes": [
+   9,
+   9,
+   9,
+   9,
+   9,
+   9
+  ],
+  "enumeration_seconds": 0.07,
+  "solve_seconds": 1.2,
+  "chi_s": {
+   "1": 36,
+   "2": 18,
+   "3": 12,
+   "4": 9,
+   "5": 8,
+   "6": 6,
+   "7": 6,
+   "8": 6,
+   "9": 6
+  },
+  "bounds": {
+   "1": [
+    36,
+    54
+   ],
+   "2": [
+    18,
+    30
+   ],
+   "3": [
+    12,
+    18
+   ],
+   "4": [
+    9,
+    18
+   ],
+   "5": [
+    8,
+    12
+   ],
+   "6": [
+    6,
+    12
+   ],
+   "7": [
+    6,
+    12
+   ],
+   "8": [
+    5,
+    12
+   ],
+   "9": [
+    5,
+    6
+   ]
+  },
+  "bounds_respected": true
+ },
+ "10": {
+  "chi": 6,
+  "chi_closed_form": 6,
+  "matches_literature": true,
+  "cover_sizes": [
+   10,
+   10,
+   10,
+   10,
+   10,
+   10
+  ],
+  "enumeration_seconds": 0.25,
+  "solve_seconds": 5.73,
+  "chi_s": {
+   "1": 45,
+   "2": 23,
+   "3": 15,
+   "4": 12,
+   "5": 9,
+   "6": 8,
+   "7": 7,
+   "8": 6,
+   "9": 6,
+   "10": 6
+  },
+  "bounds": {
+   "1": [
+    45,
+    60
+   ],
+   "2": [
+    23,
+    30
+   ],
+   "3": [
+    15,
+    24
+   ],
+   "4": [
+    12,
+    18
+   ],
+   "5": [
+    9,
+    12
+   ],
+   "6": [
+    8,
+    12
+   ],
+   "7": [
+    7,
+    12
+   ],
+   "8": [
+    6,
+    12
+   ],
+   "9": [
+    5,
+    12
+   ],
+   "10": [
+    5,
+    6
+   ]
+  },
+  "bounds_respected": true
+ },
+ "11": {
+  "chi": 7,
+  "chi_closed_form": 7,
+  "matches_literature": true,
+  "cover_sizes": [
+   11,
+   11,
+   11,
+   11,
+   11,
+   11,
+   11
+  ],
+  "enumeration_seconds": 1.23,
+  "solve_seconds": 31.72
+ }
+}
