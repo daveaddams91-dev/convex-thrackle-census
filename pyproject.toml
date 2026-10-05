@@ -22,7 +22,7 @@ dependencies = ["numpy>=1.24", "scipy>=1.10", "matplotlib>=3.7"]
 dev = ["pytest>=7.4"]
 
 [project.urls]
-Homepage = "https://github.com/daveaddams91-dev/convex-thrackle-census"
+Homepage = "https://github.com/rajveersinh-is-dev/convex-thrackle-census"
 
 [tool.setuptools.packages.find]
 where = ["src"]

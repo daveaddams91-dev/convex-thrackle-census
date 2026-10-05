@@ -113,7 +113,7 @@ twelve consecutive values of $n$ was not evidence of anything.
   title  = {Convex Thrackles: a residue bound and the census $2^{n-1}-n$},
   author = {{thrackle-census contributors}},
   year   = {2026},
-  note   = {v1.0.0, \url{https://github.com/daveaddams91-dev/convex-thrackle-census}}
+  note   = {v1.0.0, \url{https://github.com/rajveersinh-is-dev/convex-thrackle-census}}
 }
 ```
 

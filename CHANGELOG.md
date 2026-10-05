@@ -49,4 +49,4 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   manuscript §9.3 and `docs/mathematical_notes.md` §6 rather than silently
   dropped.
 
-[1.0.0]: https://github.com/daveaddams91-dev/convex-thrackle-census/releases/tag/v1.0.0
+[1.0.0]: https://github.com/rajveersinh-is-dev/convex-thrackle-census/releases/tag/v1.0.0

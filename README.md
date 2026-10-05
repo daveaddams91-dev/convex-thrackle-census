@@ -150,7 +150,7 @@ combinatorics of convex configurations.
   author = {{thrackle-census contributors}},
   year   = {2026},
   note   = {Manuscript available at paper/main.tex; software at
-             \url{https://github.com/daveaddams91-dev/convex-thrackle-census}}
+             \url{https://github.com/rajveersinh-is-dev/convex-thrackle-census}}
 }
 ```
 
