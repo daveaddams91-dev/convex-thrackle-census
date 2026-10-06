@@ -20,14 +20,25 @@ import os
 import sys
 import time
 
+from thrackle.census import construct_all_maximal, enumerate_thrackles  # noqa: E402
+
+
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 
-from thrackle.census import construct_all_maximal, enumerate_thrackles  # noqa: E402
 
 RESULTS = os.path.join(os.path.dirname(__file__), "..", "results")
 
 
 def run(max_n: int) -> dict:
+    """Worker function for parallel processing.
+    
+    Args:
+        max_n:
+    
+    Returns:
+        dict: Result of type dict
+    
+    """
     rows = []
     for n in range(4, max_n + 1):
         t0 = time.perf_counter()
@@ -56,6 +67,9 @@ def run(max_n: int) -> dict:
 
 
 def main() -> None:
+    """Entry point — parse arguments and run the main computation.
+    
+    """
     ap = argparse.ArgumentParser()
     ap.add_argument("--max-n", type=int, default=11)
     args = ap.parse_args()
