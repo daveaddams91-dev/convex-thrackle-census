@@ -19,6 +19,15 @@ GRID_COLOR = "#bbbbbb"
 
 
 def vertex_positions(n: int) -> list[tuple[float, float]]:
+    """Vertex positions.
+    
+    Args:
+        n:
+    
+    Returns:
+        The computed result
+    
+    """
     return [(math.cos(2 * math.pi * i / n), math.sin(2 * math.pi * i / n)) for i in range(n)]
 
 
@@ -94,7 +103,7 @@ def figure_examples(n: int = 9, out: str = "figures/examples.png") -> None:
         T = maximal_thrackle(S, n)
         draw_thrackle(ax, n, T, label=f"cycle of length {m}\n(|T| = {len(T)})")
     fig.suptitle(
-        "Maximal convex thrackles on a convex $%d$-gon:\none per odd subset $S$, $|S| \\geq 3$" % n,
+        f"Maximal convex thrackles on a convex ${n}$-gon:\none per odd subset $S$, $|S| \\geq 3$",
         fontsize=11,
     )
     fig.tight_layout()
