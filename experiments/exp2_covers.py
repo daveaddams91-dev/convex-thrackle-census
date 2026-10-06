@@ -20,6 +20,7 @@ import json
 import os
 import sys
 import time
+from typing import Any, Dict, List, Tuple
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 
@@ -29,45 +30,79 @@ from thrackle.covers import chi_closed_form, set_cover, trivial_bounds  # noqa: 
 RESULTS = os.path.join(os.path.dirname(__file__), "..", "results")
 
 
-def run(max_n: int, restricted_max_n: int) -> dict:
-    out: dict[str, dict] = {}
+def _process_restricted_part(
+    n: int, cols: List[Any]
+) -> Tuple[Dict[int, int], Dict[int, List[int]], bool]:
+    """Process chi_s and bounds for all s in 1..n.
+
+    Returns:
+        tuple of (chi_s_dict, bounds_dict, bounds_respected)
+        where chi_s_dict maps s to chi_s(n,s),
+        bounds_dict maps s to [lower_bound, upper_bound],
+        and bounds_respected is True if all chi_s values are within bounds.
+    """
+    chi_s_dict: Dict[int, int] = {}
+    bounds_dict: Dict[int, List[int]] = {}
+    bad_s: List[int] = []
+    for s in range(1, n + 1):
+        t3 = time.perf_counter()
+        sub = [T for T in cols if len(T) <= s]
+        v, _ = set_cover(sub, n)
+        t4 = time.perf_counter()
+        lo, hi = trivial_bounds(n, s)
+        chi_s_dict[s] = v
+        bounds_dict[s] = [lo, hi]
+        flag = "ok" if lo <= v <= hi else "BOUND VIOLATED"
+        print(f"        s={s:>3d}  chi_s = {v:>5d}   [{lo}, {hi}]  {flag}  [{t4-t3:.2f}s]")
+        if not (lo <= v <= hi):
+            bad_s.append(s)
+    bounds_respected = len(bad_s) == 0
+    return chi_s_dict, bounds_dict, bounds_respected
+
+
+def run(max_n: int, restricted_max_n: int) -> Dict[int, Dict[str, Any]]:
+    """Run experiment for n from 4 to max_n.
+
+    Args:
+        max_n: Maximum n to process (inclusive).
+        restricted_max_n: Maximum n for which to compute chi_s (inclusive).
+
+    Returns:
+        Dictionary mapping n to result record.
+    """
+    out: Dict[int, Dict[str, Any]] = {}
     for n in range(4, max_n + 1):
         t0 = time.perf_counter()
         cols = enumerate_thrackles(n)
         t1 = time.perf_counter()
         opt, chosen = set_cover(cols, n)
+        t2 = time.perf_counter()
         closed = chi_closed_form(n)
-        rec = {
+        rec: Dict[str, Any] = {
             "chi": opt,
             "chi_closed_form": closed,
             "matches_literature": opt == closed,
             "cover_sizes": sorted(len(cols[j]) for j in chosen),
             "enumeration_seconds": round(t1 - t0, 2),
-            "solve_seconds": round(time.perf_counter() - t1, 2),
+            "solve_seconds": round(t2 - t1, 2),
         }
         print(
             f"n={n:3d}  chi(D_n) = {opt:>3d}   published = {closed:>3d}   "
             f"{'match' if opt == closed else 'MISMATCH'}   [{rec['solve_seconds']:.2f}s]"
         )
         if n <= restricted_max_n:
-            rec["chi_s"] = {}
-            rec["bounds"] = {}
-            for s in range(1, n + 1):
-                t2 = time.perf_counter()
-                sub = [T for T in cols if len(T) <= s]
-                v = set_cover(sub, n)[0]
-                lo, hi = trivial_bounds(n, s)
-                rec["chi_s"][s] = v
-                rec["bounds"][s] = [lo, hi]
-                flag = "ok" if lo <= v <= hi else "BOUND VIOLATED"
-                print(f"        s={s:>3d}  chi_s = {v:>5d}   [{lo}, {hi}]  {flag}  [{time.perf_counter()-t2:.2f}s]")
-            bad = [s for s in rec["chi_s"] if not (rec["bounds"][s][0] <= rec["chi_s"][s] <= rec["bounds"][s][1])]
-            rec["bounds_respected"] = not bad
+            chi_s_dict, bounds_dict, bounds_respected = _process_restricted_part(
+                n, cols
+            )
+            rec["chi_s"] = chi_s_dict
+            rec["bounds"] = bounds_dict
+            rec["bounds_respected"] = bounds_respected
         out[n] = rec
     return out
 
 
 def main() -> None:
+    """Parse arguments, run experiment, and save results."""
     ap = argparse.ArgumentParser()
     ap.add_argument("--max-n", type=int, default=11)
     ap.add_argument("--restricted-max-n", type=int, default=10)
@@ -80,7 +115,11 @@ def main() -> None:
     bad = [n for n, v in data.items() if not v["matches_literature"]]
     bad += [n for n, v in data.items() if v.get("bounds_respected") is False]
     print(f"\nwrote {path}")
-    print("all checks passed" if not bad else f"FAILURES at {sorted(set(bad))}")
+    print(
+        "all checks passed"
+        if not bad
+        else f"FAILURES at {sorted(set(bad))}"
+    )
     sys.exit(1 if bad else 0)
 
 

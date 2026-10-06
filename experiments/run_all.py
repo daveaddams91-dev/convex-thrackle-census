@@ -26,13 +26,21 @@ RESULTS = os.path.join(ROOT, "results")
 
 
 def sh(*args: str) -> None:
+    """Sh.
+    
+    """
     print(f"\n$ {' '.join(args)}", flush=True)
     subprocess.run([sys.executable, *args], check=True, cwd=ROOT)
 
 
 def make_figures(max_n: int) -> None:
+    """Create figures.
+    
+    Args:
+        max_n:
+    
+    """
     os.makedirs(FIGURES, exist_ok=True)
-    import matplotlib.pyplot as plt  # noqa: F401
 
     from thrackle import drawing
 
@@ -58,6 +66,9 @@ def make_figures(max_n: int) -> None:
 
 
 def main() -> None:
+    """Entry point — parse arguments and run the main computation.
+    
+    """
     ap = argparse.ArgumentParser()
     ap.add_argument("--quick", action="store_true", help="smaller n (fast smoke run)")
     ap.add_argument("--max-n", type=int, default=None)

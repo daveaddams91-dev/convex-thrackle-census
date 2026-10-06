@@ -10,8 +10,8 @@ arithmetic is used anywhere.
 
 from __future__ import annotations
 
-from itertools import combinations
 from typing import Iterable, Iterator, Sequence
+
 
 Edge = tuple[int, int]
 EdgeSet = frozenset[Edge]
@@ -68,9 +68,9 @@ def meet(e: Edge, f: Edge) -> bool:
 def is_thrackle(T: Iterable[Edge], n: int | None = None) -> bool:
     """True iff every two distinct chords of ``T`` *meet*."""
     items = sorted({norm(*e) for e in T})
-    for i in range(len(items)):
+    for i, item in enumerate(items):
         for j in range(i + 1, len(items)):
-            if not meet(items[i], items[j]):
+            if not meet(item, items[j]):
                 return False
     return True
 
@@ -100,6 +100,15 @@ def residues_ok(T: Iterable[Edge], n: int) -> bool:
 
 
 def degrees(T: Iterable[Edge]) -> dict[int, int]:
+    """Degrees.
+    
+    Args:
+        T:
+    
+    Returns:
+        The computed result
+    
+    """
     d: dict[int, int] = {}
     for a, b in T:
         d[a] = d.get(a, 0) + 1

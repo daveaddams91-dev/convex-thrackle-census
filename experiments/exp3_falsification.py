@@ -39,6 +39,15 @@ from thrackle.structure import boundary_edge_family, doublestars, odd_subsets, t
 
 
 def falsify(max_n: int) -> dict:
+    """Falsify.
+    
+    Args:
+        max_n:
+    
+    Returns:
+        dict: Result of type dict
+    
+    """
     failures: list[str] = []
 
     for n in range(4, max_n + 1):
@@ -109,7 +118,8 @@ def falsify(max_n: int) -> dict:
                 continue
             S = list(range(m))
             T = thrackle_cycle(S)
-            for perm in itertools.permutations(S[1:]):
+            for perm in itertools.permutations(S[1:
+                ]):
                 cyc = [norm(S[0], perm[0])]
                 cyc += [norm(perm[k], perm[k + 1]) for k in range(len(perm) - 1)]
                 cyc.append(norm(perm[-1], S[0]))
@@ -125,6 +135,9 @@ def falsify(max_n: int) -> dict:
 
 
 def main() -> None:
+    """Entry point — parse arguments and run the main computation.
+    
+    """
     ap = argparse.ArgumentParser()
     ap.add_argument("--max-n", type=int, default=9)
     args = ap.parse_args()

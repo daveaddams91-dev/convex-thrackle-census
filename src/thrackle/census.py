@@ -15,7 +15,6 @@ i.e. linear time in the output size up to the polynomial factor.
 from __future__ import annotations
 
 from collections import Counter
-from typing import Iterable, Iterator, Sequence
 
 from .chords import Edge, all_chords, meet
 from .structure import odd_subsets, thrackle_cycle, maximal_thrackle
@@ -40,6 +39,13 @@ def enumerate_thrackles(n: int) -> list[frozenset[Edge]]:
     out: list[frozenset[Edge]] = []
 
     def rec(chosen: list[int], cand: list[int]) -> None:
+        """Rec.
+        
+        Args:
+            chosen:
+            cand (list):
+        
+        """
         out.append(frozenset(E[i] for i in chosen))
         k = len(cand)
         for pos in range(k):
@@ -71,6 +77,7 @@ def cycle_length_census(n: int) -> dict[int, int]:
 # --------------------------------------------------------------------------
 # The constructive (polynomial time) route to the same numbers
 # --------------------------------------------------------------------------
+
 
 def predicted_maximal_counts(n: int) -> dict[int, int]:
     """``{ cycle length : count }`` predicted by Theorem 1.4: ``binom(n, m)``."""
